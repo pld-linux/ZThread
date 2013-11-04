@@ -42,3 +42,14 @@
  
  af_cflags="$af_cflags $includes -DREENTRANT -DZT_POSIX"
  af_libs="$libs -l$LIB_NAME $af_libs @LINKER_OPTIONS@"
+--- ZThread-2.3.2/src/Makefile.am.orig	2005-03-13 04:51:32.000000000 +0100
++++ ZThread-2.3.2/src/Makefile.am	2013-11-04 21:05:46.362568360 +0100
+@@ -21,8 +21,6 @@
+ INCLUDES = -I$(top_srcdir)/include
+ SUBDIRS=.
+ 
+-libdir=$(prefix)/lib
+-
+ lib_LTLIBRARIES = libZThread.la
+ 
+ libZThread_la_LIBADD=@LINKER_OPTIONS@ @EXTRA_LINKER_OPTIONS@
