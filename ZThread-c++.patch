@@ -83,6 +83,24 @@
      for(;;) {
 --- ZThread-2.3.2/include/zthread/Guard.h.orig	2005-03-13 03:10:09.000000000 +0100
 +++ ZThread-2.3.2/include/zthread/Guard.h	2008-09-10 18:14:58.176983956 +0200
+@@ -428,7 +428,7 @@
+   template <class U, class V>
+   Guard(Guard<U, V>& g) : LockHolder<LockType>(g) {
+ 
+-    LockingPolicy::shareScope(*this, extract(g));
++    LockingPolicy::shareScope(*this, this->extract(g));
+     
+   }
+ 
+@@ -458,7 +458,7 @@
+   template <class U, class V>
+   Guard(Guard<U, V>& g, LockType& lock) : LockHolder<LockType>(lock) {
+ 
+-    LockingPolicy::transferScope(*this, extract(g));
++    LockingPolicy::transferScope(*this, this->extract(g));
+ 
+   }
+ 
 @@ -491,7 +491,7 @@ Guard<LockType, LockingPolicy>::~Guard()
      
    try {

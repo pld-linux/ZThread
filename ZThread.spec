@@ -5,7 +5,7 @@ Version:	2.3.2
 Release:	1
 License:	MIT
 Group:		Libraries
-Source0:	http://dl.sourceforge.net/zthread/%{name}-%{version}.tar.gz
+Source0:	http://downloads.sourceforge.net/zthread/%{name}-%{version}.tar.gz
 # Source0-md5:	f2782d19b8ed6f1ff2ab8824dd4ba48e
 Patch0:		%{name}-c++.patch
 Patch1:		%{name}-destdir.patch
