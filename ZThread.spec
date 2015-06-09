@@ -2,7 +2,7 @@ Summary:	Platform-independent, multi-threading and synchronization library for C
 Summary(pl.UTF-8):	Wieloplatformowa biblioteka C++ do obsługi wątków i synchronizacji
 Name:		ZThread
 Version:	2.3.2
-Release:	1
+Release:	2
 License:	MIT
 Group:		Libraries
 Source0:	http://downloads.sourceforge.net/zthread/%{name}-%{version}.tar.gz
