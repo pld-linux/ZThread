@@ -58,9 +58,9 @@ Statyczna biblioteka ZThread.
 
 %prep
 %setup -q
-%patch0 -p1
-%patch1 -p1
-%patch2 -p1
+%patch -P0 -p1
+%patch -P1 -p1
+%patch -P2 -p1
 
 %build
 %{__libtoolize}
@@ -86,14 +86,14 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS COPYING ChangeLog NEWS README TODO
-%attr(755,root,root) %{_libdir}/libZThread-2.3.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libZThread-2.3.so.2
+%{_libdir}/libZThread-2.3.so.*.*.*
+%ghost %{_libdir}/libZThread-2.3.so.2
 
 %files devel
 %defattr(644,root,root,755)
 %doc doc/*.{html,js,css}
 %attr(755,root,root) %{_bindir}/zthread-config
-%attr(755,root,root) %{_libdir}/libZThread.so
+%{_libdir}/libZThread.so
 %{_libdir}/libZThread.la
 %{_includedir}/zthread
 %{_aclocaldir}/pthread.m4
